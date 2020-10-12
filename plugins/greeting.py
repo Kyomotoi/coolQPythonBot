@@ -125,7 +125,8 @@ def batchSend():
             continue
         try:
             callModuleAPI(
-                "send_msg", params={"group_id": groupID, "message": timeTelling()},
+                "send_msg",
+                params={"group_id": groupID, "message": timeTelling()},
             )
         except Exception:
             eid = ExceptionProcess.catch()

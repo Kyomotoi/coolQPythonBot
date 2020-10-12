@@ -36,26 +36,26 @@ if not exists(TEMP_DIR):
 
 class tmpFile(object):
     """
-        DESCRIPTION
+    DESCRIPTION
 
-            Create a tmp file.
+        Create a tmp file.
 
-        USAGE
+    USAGE
 
-            from tmpFile import tmpFile
+        from tmpFile import tmpFile
 
-            with tmpFile() as tmpFileName, open(tmpFileName, 'w') as fo:
-                ...
+        with tmpFile() as tmpFileName, open(tmpFileName, 'w') as fo:
+            ...
 
-            # File: "tmpFileName" will be deleted automatically (if exist)
+        # File: "tmpFileName" will be deleted automatically (if exist)
 
-        ARGUMENT
+    ARGUMENT
 
-            * ext = '', str
-                The extension of the tempfile.
+        * ext = '', str
+            The extension of the tempfile.
 
-            * path = './', str
-                The path of the tempfile.
+        * path = './', str
+            The path of the tempfile.
     """
 
     __slots__ = ("__tmpFileName",)
@@ -81,23 +81,23 @@ class tmpFile(object):
 
 class tmpFolder(object):
     """
-        DESCRIPTION
+    DESCRIPTION
 
-            Create a tmp folder.
+        Create a tmp folder.
 
-        USAGE
+    USAGE
 
-            from tmpFile import tmpFolder
+        from tmpFile import tmpFolder
 
-            with tmpFolder() as tmpFolderPath:
-                ...
+        with tmpFolder() as tmpFolderPath:
+            ...
 
-            # Folder: "tmpFolderPath" will be deleted automatically (if exist)
+        # Folder: "tmpFolderPath" will be deleted automatically (if exist)
 
-        ARGUMENT
+    ARGUMENT
 
-            * path = './', str
-                The path of the tmp folder.
+        * path = './', str
+            The path of the tmp folder.
     """
 
     __slots__ = ("__tmpFolderName",)
