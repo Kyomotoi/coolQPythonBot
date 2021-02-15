@@ -27,8 +27,7 @@ def _getFunctionName(function: Callable) -> str:
 
 
 def Timeit(function: Callable):
-    """Decorator for timing a function
-    """
+    """Decorator for timing a function"""
     assert callable(function)
 
     @wraps(function)
@@ -48,8 +47,7 @@ def Timeit(function: Callable):
 
 
 def SyncToAsync(function: Callable):
-    """Decorator to convert synchronous functions to asynchronous functions
-    """
+    """Decorator to convert synchronous functions to asynchronous functions"""
     function = Timeit(function)
 
     @wraps(function)
@@ -61,8 +59,7 @@ def SyncToAsync(function: Callable):
 
 
 def AsyncToSync(function: Callable):
-    """Decorator to convert asynchronous functions to synchronous functions
-    """
+    """Decorator to convert asynchronous functions to synchronous functions"""
     function = Timeit(function)
 
     @wraps(function)
