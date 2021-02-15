@@ -70,8 +70,7 @@ configLoad = loadConfigInYAML
 
 
 class configsReader:
-    """ Read setting object
-    """
+    """Read setting object"""
 
     def __init__(self, configDir: str, defaultDir: str):
         """__init__ [summary]
